@@ -2360,3 +2360,62 @@ button,
     width: 100% !important;
     height: auto;
 }
+/* ===== FORCE SIDE-BY-SIDE EVEN ON MOBILE ===== */
+@media screen and (max-width: 768px) {
+
+    #banner {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #banner .content {
+        width: 60%;
+    }
+
+    #banner .image.object {
+        width: 40%;
+        margin: 0;
+    }
+
+    #banner .image.object img {
+        width: 100%;
+        height: auto;
+    }
+}
+/* ===== FIX IMAGE OVERFLOW ISSUE ===== */
+
+#banner {
+    display: flex;
+    flex-wrap: nowrap !important;  /* prevent breaking */
+    align-items: flex-start;       /* align top */
+}
+
+/* Ensure container grows properly */
+#banner .content,
+#banner .image.object {
+    flex-shrink: 0;
+}
+
+/* Prevent image from overflowing */
+#banner .image.object img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Add spacing so it doesn't collide with next section */
+#banner {
+    margin-bottom: 40px;
+}
+/* Fix height alignment */
+#banner .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* Prevent section overlap */
+section {
+    clear: both;
+}
