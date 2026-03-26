@@ -2287,3 +2287,76 @@ button,
     height: auto;
     border-radius: 12px;
 }
+/* ===== FIX MOBILE ONLY (SAFE) ===== */
+@media screen and (max-width: 768px) {
+
+    #banner {
+        text-align: center;
+    }
+
+    #banner .profile-pic {
+        display: block;
+        margin: 0 auto 20px auto;
+        width: 180px;
+    }
+
+    #banner .profile-pic img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}/* ===== PROFILE IMAGE FIX (ALL DEVICES) ===== */
+
+.profile-pic {
+    max-width: 350px;   /* controls size on desktop */
+    width: 100%;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* ===== MOBILE FIX ===== */
+@media screen and (max-width: 768px) {
+
+    .profile-pic {
+        max-width: 200px;
+        margin: 0 auto 20px auto;
+        display: block;
+    }
+
+    #banner {
+        text-align: center;
+    }
+}
+.profile-pic img {
+    max-width: 300px !important;
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+}
+#banner .image {
+    max-width: 350px;
+}
+#banner .image {
+    width: 300px;
+}
+
+#banner .image img {
+    width: 100%;
+    height: auto;
+}
+/* ===== FINAL IMAGE FIX ===== */
+
+#banner .image.object {
+    flex: 0 0 300px !important;
+    max-width: 300px !important;
+}
+
+#banner .image.object img {
+    width: 100% !important;
+    height: auto;
+}
