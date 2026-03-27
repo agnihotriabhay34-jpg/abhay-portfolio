@@ -2352,3 +2352,30 @@ button,
         max-width: 220px !important;
     }
 }
+/* ===== FIX: MOBILE CHROME DESKTOP MODE ===== */
+
+@media screen and (max-width: 1024px) {
+
+    #banner {
+        flex-direction: column !important;   /* STACK */
+        gap: 20px;
+    }
+
+    #banner .content {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    #banner .image {
+        max-width: 100% !important;
+        width: 100% !important;
+        text-align: center;
+    }
+
+    #banner .image img {
+        width: 70% !important;
+        max-width: 280px;
+        margin: 0 auto;
+        display: block;
+    }
+}
