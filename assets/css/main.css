@@ -2396,10 +2396,7 @@ button,
         max-width: 300px;
     }
 }
-/* ===== FINAL ALIGNMENT FIX ===== */
-
 @media screen and (max-width: 900px) {
-
     #banner {
         display: block !important;
         text-align: left;
@@ -2411,7 +2408,7 @@ button,
 
     #banner .image {
         width: 100%;
-        margin: 1.5em auto 0 auto;   /* spacing from text */
+        margin: 1.5em auto 0 auto;
         text-align: center;
     }
 
