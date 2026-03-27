@@ -2352,29 +2352,72 @@ button,
         max-width: 220px !important;
     }
 }
-/* ===== FIX: MOBILE CHROME DESKTOP MODE ===== */
+/* ===== FINAL HARD FIX (DESKTOP MODE ISSUE) ===== */
 
-@media screen and (max-width: 1024px) {
+#banner {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+/* FORCE TEXT */
+#banner .content {
+    flex: 1;
+    min-width: 0;   /* VERY IMPORTANT */
+}
+
+/* FORCE IMAGE BEHAVIOR */
+#banner .image {
+    display: block !important;   /* KILLS TEMPLATE FLOAT BEHAVIOR */
+    flex: 0 0 260px;
+}
+
+#banner .image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== ONLY FIX FOR DESKTOP MODE ON MOBILE ===== */
+@media screen and (max-width: 900px) {
 
     #banner {
-        flex-direction: column !important;   /* STACK */
-        gap: 20px;
-    }
-
-    #banner .content {
-        max-width: 100% !important;
-        width: 100% !important;
+        display: block !important;
     }
 
     #banner .image {
-        max-width: 100% !important;
         width: 100% !important;
+        margin-top: 15px;
         text-align: center;
     }
 
     #banner .image img {
-        width: 70% !important;
-        max-width: 280px;
+        width: 80% !important;
+        max-width: 300px;
+    }
+}
+/* ===== FINAL ALIGNMENT FIX ===== */
+
+@media screen and (max-width: 900px) {
+
+    #banner {
+        display: block !important;
+        text-align: left;
+    }
+
+    #banner .content {
+        width: 100% !important;
+    }
+
+    #banner .image {
+        width: 100%;
+        margin: 1.5em auto 0 auto;   /* spacing from text */
+        text-align: center;
+    }
+
+    #banner .image img {
+        width: 75%;
+        max-width: 260px;
         margin: 0 auto;
         display: block;
     }
